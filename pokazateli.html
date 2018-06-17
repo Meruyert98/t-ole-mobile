@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>T'ole</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+     <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="css/fontastic.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/Group 8447.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+  <div class="page">
+      <!-- Main Navbar-->
+      <header class="header">
+          <nav class="navbar">
+              <div class="container-fluid">
+                  <div class="navbar-holder d-flex align-items-center justify-content-between">
+                      <!-- Navbar Header-->
+                      <div class="navbar-header">
+                          <div class="navbar-header">
+                              <div class="row">
+                                  <!-- Navbar Brand -->
+                                  <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                                      <a href="index.html">
+                                          <li class="nav-item">
+                                              <span style="margin-top:10px;margin-left:20px; color: gray;">Назад</span>
+                                          </li>
+                                      </a>
+                                  </ul>
+                                  <div style="margin-left:60px;" class="brand-text d-inline-block d-lg-inline-block d-xs-inline-block">
+                                      <a href="pokazateli.html" class="navbar-brand d-inline-block d-sm-inline-block">
+                                          <span>Показатели</span>
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Navbar Menu -->
+              </div>
+          </nav>
+      </header>
+      <div class="page-content d-flex align-items-stretch">
+          <!-- Side Navbar -->
+          <div class="content-inner">
+              <!-- Page Header-->
+              <header class="page-header">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-12 col-lg-12">
+                              <div class="chart col-lg-6 col-12">
+                                  <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
+                                      <canvas id="lineCahrt"></canvas>
+                                  </div>
+                              </div>
+                              <br/>
+                              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                  <li class="nav-item">
+                                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                                          День
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                          Неделя
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                          Месяц
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" id="pills-contact1-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                          Год
+                                      </a>
+                                  </li>
+                              </ul>
+                              <div class="tab-content" id="pills-tabContent">
+                                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                      <table style="width:100%;">
+                                          <tbody>
+                                          <tr style="border-bottom:5px solid #F0F0F0;">
+                                              <td style="padding-left:10px;">
+                                                  Продажи
+                                              </td>
+                                              <td style="margin-left:0px; color:#38B7C7;">
+                                                  25 999 тг
+                                              </td>
+                                          </tr>
+                                          <tr style="border-bottom:5px solid #F0F0F0;">
+                                              <td style="padding-left:10px;">
+                                                  Продано
+                                              </td>
+                                              <td style="margin-left:0px; color:#38B7C7;">
+                                                  49
+                                              </td>
+                                          </tr>
+                                          <tr style="border-bottom:5px solid #F0F0F0;">
+                                              <td style="padding-left:10px;">
+                                                  Прибыль
+                                              </td>
+                                              <td style="margin-left:0px; color:#38B7C7;">
+                                                  15 999 тг
+                                              </td>
+                                          </tr>
+                                          <tr style="border-bottom:5px solid #F0F0F0;">
+                                              <td style="padding-left:10px;">
+                                                  Товары в обороте
+                                              </td>
+                                              <td style="margin-left:0px; color:#38B7C7;">
+                                                  2 млн тг
+                                              </td>
+                                          </tr>
+                                          </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                              <!--<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                  <table style="width:100%;">
+                                      <tbody>
+                                      <tr>
+                                          <td style="padding-left:10px;">
+                                              Продажи
+                                          </td>
+                                          <td style="margin-left:0px; color:#38B7C7;">
+                                              25 999 тг
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="padding-left:10px;">
+                                              Продано
+                                          </td>
+                                          <td style="margin-left:0px; color:#38B7C7;">
+                                              49
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="padding-left:10px;">
+                                              Прибыль
+                                          </td>
+                                          <td style="margin-left:0px; color:#38B7C7;">
+                                              15 999 тг
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="padding-left:10px;">
+                                              Товары в обороте
+                                          </td>
+                                          <td style="margin-left:0px; color:#38B7C7;">
+                                              2 млн тг
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                  <table style="width:100%;">
+                                      <tbody>
+                                      <tr>
+                                          <td style="padding-left:10px;">
+                                              Продажи
+                                          </td>
+                                          <td style="margin-left:0px; color:#38B7C7;">
+                                              25 999 тг
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="padding-left:10px;">
+                                              Продано
+                                          </td>
+                                          <td style="margin-left:0px; color:#38B7C7;">
+                                              49
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="padding-left:10px;">
+                                              Прибыль
+                                          </td>
+                                          <td style="margin-left:0px; color:#38B7C7;">
+                                              15 999 тг
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="padding-left:10px;">
+                                              Товары в обороте
+                                          </td>
+                                          <td style="margin-left:0px; color:#38B7C7;">
+                                              2 млн тг
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                  </table>
+                              </div>-->
+                          </div>
+                          <br/>
+                          <br/>
+                      </div>
+                  </div>
+              </header>
+          </div>
+      </div>
+  </div>
+  <footer class="some" data-spy="affix">
+      <div class="container-fluid">
+          <div class="row">
+        <a href="pokazateli.html">
+          <img id="bir" style="margin-left: 20px;position:absolute;top:5;left:0;" src="img/statistics.png">
+        </a>
+        <a href="spisok.html">
+          <img style="position:relative;margin-left:180px;" id="eki" src="img/menu.png">
+        </a>
+        <a href="setting_mobile.html">
+          <img style="margin-right: 20px;position:absolute;top:5;right:0;" id="ush" src="img/settings.png">
+        </a>
+      </div>
+      </div>
+  </footer>
+  <!-- JavaScript files-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper.js/umd/popper.min.js"> </script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+  <script src="js/charts-home.js"></script>
+  <!-- Main File-->
+  <script src="js/front.js"></script>
+  <script>
+      $(document).ready(function(){
+        if($(window).width() <= 359) {
+            document.getElementById("bir").style.marginLeft = "10px";
+            document.getElementById("eki").style.marginLeft = "125px";
+            document.getElementById("ush").style.marginRight = "10px";
+        }
+    });
+  </script>
+  </body>
+</html>
